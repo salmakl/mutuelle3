@@ -68,11 +68,12 @@ public class LoginController implements LoginInterface {
             else if (decryption(password,email)) {
                 System.out.println(decryption(password,email));
                 main.chaneScene("dashboard.fxml");
+                log.info("User logged in");
 
             }
             else {
                 wrong.setText("Wrong email or password");
-                log.info("Wrong email or password");
+                log.error("Wrong email or password");
 
 
             }

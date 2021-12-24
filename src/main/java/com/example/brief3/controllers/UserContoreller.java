@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -130,7 +131,7 @@ public class UserContoreller implements Initializable, UserInterface {
 
 
 
-
+    static final Logger log = Logger.getLogger(LoginController.class.getName());
     public void save() {
 
 
@@ -260,6 +261,7 @@ public class UserContoreller implements Initializable, UserInterface {
                     "Bienvenu sur WayToLearnX",
                     "mail de test!"
             );
+            log.info("Client added");
 
         }
 }
@@ -325,7 +327,7 @@ public class UserContoreller implements Initializable, UserInterface {
         m.chaneScene("statistics.fxml");
     }
     public static void sendMail(String from,String pwd,String to,String sub,String msg){
-        //Propriétés
+        //PropriétésX
         Properties p = new Properties();
         p.put("mail.smtp.host", "smtp.gmail.com");
         p.put("mail.smtp.socketFactory.port", "465");

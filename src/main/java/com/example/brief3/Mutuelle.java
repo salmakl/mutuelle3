@@ -1,14 +1,17 @@
 package com.example.brief3;
 
+import com.example.brief3.controllers.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
 public class Mutuelle extends Application {
+    static final Logger log = Logger.getLogger(LoginController.class.getName());
 
     private static Stage stg;
     @Override
@@ -28,6 +31,7 @@ public class Mutuelle extends Application {
     }
 
     public static void main(String[] args) {
+        log.info("Starting application");
         launch();
     }
 }
